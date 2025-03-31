@@ -1,0 +1,82 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.body-2, .login-box, .login, .login form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-2 {
+    margin: 0;
+}
+
+.login-box {
+    position: relative;
+    top: 100px;
+    background: #202127;
+    width: 500px;
+    height: auto;
+    padding:20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #69dc9f;
+    border-radius: 14px;
+    color: #dfdfd6;
+}
+
+.login-box img {
+    width: 100px;
+    height: auto;
+}
+
+.login input {
+    margin-top: 10px;
+    width: 350px;
+    height: 35px;
+    border-style: solid;
+    border-color: #202127;
+    border-radius: 8px;
+    font-size: 16px
+}
+
+.login a {
+    color: #777;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.sign-in-button {
+    background: #69dc9f;
+    border-style: solid;
+    border-color: #69dc9f;
+    width: 350px;
+    height: 35px;
+    border-radius: 8px;
+}
+
+.register-button {
+    margin-top: 10px;
+    background: #69dc9f;
+    border-style: solid;
+    border-color: #69dc9f;
+    width: 345px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.name-container input {
+    width: 42%;
+}

@@ -1,0 +1,132 @@
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+body {
+    background: rgb(12, 12, 20);
+}
+
+.toolbar-container {
+    position: fixed;
+    display:flex;
+    z-index: 1000;
+    justify-content: space-between;
+    width: 100vw;
+    height: 55px;
+    overflow: hidden;
+    background: rgba(12, 12, 20, 0.7);
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 2px;
+    border-color: #222;
+}
+
+.toolbar-container img {
+    width: auto;
+    height: 110px;
+    margin-left: 0.5vw;
+    margin-right: 30px;
+    margin-top: 10px;
+    align-self: center;
+}
+.toolbar ul img {
+    width: auto;
+    height: 40px;
+    margin-left: 1vw;
+    margin-right: 30px;
+    margin-top: 7px;
+    align-self: center;
+}
+
+.toolbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.toolbar ul li {
+    flex: 1;
+}
+
+.toolbar ul li a {
+    display: block;
+    font-size: 20px;
+    color: #e0e0e2;
+    text-align: center;
+    padding-top: 16px;
+    padding-left: 0;
+    padding-right: 45px;
+    text-decoration: none;
+    height: 100%;
+    width: 8vw;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+
+}
+
+.toolbar ul li a:hover {
+    color: #69dc9f;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.toolbar ul:hover li a:not(:hover) {
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.home-page-container {
+    top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.landing-text-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 5vw;
+    height: 2000px;
+}
+
+
+.title-container {
+    margin-top: 8vh;
+    font-weight: bold;
+    font-size: 22px;
+    width: 60vw;
+    color: #e0e0e2;
+}
+
+.paragraph-container {
+    margin-top: 2vh;
+    font-size: 18px;
+    color: #777;
+    width: 55vw;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.button-container button {
+    margin: 3vw;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-radius: 30px;
+    height: auto;
+    font-size: 16px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #e0e0e2;
+    color: #e0e0e2;
+    background: rgba(12, 12, 20, 0.9);
+}
+
+
