@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/login.css">
+</head>
+<body>
+
+{% include 'toolbar.html' %}
+
+
+<div class="login-box">
+
+    <img src="../static/icons/icons8-account-96.png" alt="login">
+    <h1>Register</h1>
+
+    <form method="POST" action="{{ url_for('register') }}">
+
+        <div class="login">
+
+            <div class="name-container">
+                <label for="first_name"></label>
+                <input type="text" id="first_name" name="first_name" placeholder="First name" class="input-field" value="{{ first_name or '' }}" >
+
+                <label for="last_name"></label>
+                <input type="text" id="last_name" name="last_name" placeholder="Last name" class="input-field" value="{{ last_name or '' }}" >
+            </div>
+
+            <label for="email"></label>
+            <input type="text" id="email" name="email" placeholder="Email address" class="input-field" value="{{ email or '' }}" required>
+
+            <label for="address"></label>
+            <input type="text" id="address" name="address" placeholder="Address" class="input-field" value="{{ address or '' }}" >
+
+            <label for="city"></label>
+            <input type="text" id="city" name="city" placeholder="City" class="input-field" value="{{ city or '' }}" >
+
+            <label for="postcode"></label>
+            <input type="text" id="postcode" name="postcode" placeholder="Postcode" class="input-field" value="{{ postcode or '' }}" >
+
+            <label for="phone"></label>
+            <input type="text" id="phone" name="phone" placeholder="Phone number" class="input-field" value="{{ phone or '' }}" required>
+
+            <label for="password"></label>
+            <input type="text" id="password" name="password" placeholder="Password" class="input-field" required>
+
+            <input class="register-button" type="submit" value="Register">
+
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>

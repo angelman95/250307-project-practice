@@ -1,0 +1,20 @@
+<div class="toolbar-container">
+
+    <img src="../static/icons/rolsa-output-onlinepngtools.png" alt="rolsa-logo">
+
+    <div class="toolbar">
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+
+            <!--which option shows if logged in or not-->
+            {% if user_id %}
+                <li><a href="/logout">Log Out</a></li>
+            {% else %}
+                <li><a href="/login">Log In</a></li>
+            {% endif %}
+            <img src="../static/icons/icons8-account-96.png" alt="account">
+        </ul>
+    </div>
+</div>
