@@ -1,0 +1,164 @@
+.profile-container {
+    position: relative;
+    right: 25px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 600px;
+    color: #e0e0e2;
+    justify-content: space-between;
+}
+
+.profile-container h2 {
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+
+.profile-container h3 {
+    color: #888;
+    margin-top: 12px;
+}
+
+.profile-container p {
+    color: #888;
+    margin-top: 12px;
+}
+
+.profile-container button {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-radius: 4px;
+    width: 180px;
+    height: auto;
+    font-size: 16px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #e0e0e2;
+    background-color: #202127;
+    color: #e0e0e2;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.profile-container button:hover {
+border-color: #69dc9f;
+background-color: #69dc9f;
+color: rgb(12, 12, 20);
+transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 110%;
+}
+
+.details-panel {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 100%;
+    margin: 15px;
+}
+
+.details-panel form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 20px
+}
+.details-panel form label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.details-panel [type="text"] {
+    width: 92%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+.details-panel [type="main-text"] {
+    width: 92%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+.carbon-panel {
+    position: relative;
+    width: 90%;
+    height: 45%;
+    margin: 15px;
+}
+
+.carbon-panel button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.consultation-panel {
+    width: 90%;
+    height: 45%;
+    margin: 15px;
+}
+
+
+.consultation-panel .icon-paragraph {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+
+.consultation-panel .icon img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.consultation-panel, .details-panel, .carbon-panel {
+    border-style: solid;
+    border-color: #444;
+    border-width: 2px;
+    border-radius: 8px;
+    background: #202127;
+    padding: 15px;
+    transition: border-color 0.2s ease;
+}
+
+.consultation-panel:hover, .details-panel:hover, .carbon-panel:hover {
+    border-color: #69dc9f;
+    transition: border-color 0.3s ease;
+}
+
+.booking-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px;
+    margin-bottom: 50px;
+}
+
+.booking-buttons {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    bottom: -50px;
+    margin: 20px;
+    gap: 40px; /* Adds space between the buttons */
+}

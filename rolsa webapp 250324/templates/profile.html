@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/profile.css">
+</head>
+<body>
+    {% include 'toolbar.html' %}
+
+    <div class="body-2">
+
+        <div class="profile-container">
+
+            <div class="details-panel">
+
+                <h2>Account Details</h2>
+                <p><strong>First Name:</strong> {{ customer.forename }}</p>
+                <p><strong>Last Name:</strong> {{ customer.surname }}</p>
+                <p></p>
+                <p><strong>Email:</strong> {{ customer.email }}</p>
+                <p><strong>Phone:</strong> {{ customer.phone }}</p>
+                <p></p>
+                <p><strong>City:</strong> {{ customer.city }}</p>
+                <p><strong>Address:</strong> {{ customer.address }}</p>
+                <p><strong>Postcode:</strong> {{ customer.postcode }}</p>
+
+                <div class="booking-buttons">
+                    <form action="/logout" method="POST">
+                        <button type="submit">Logout</button>
+                    </form>
+                    <form action="/acc_delete" method="POST">
+                        <button type="submit">Delete your account</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="right-container">
+
+                <div class="carbon-panel">
+
+                    <h2>Your carbon footprint</h2>
+
+                        {% if customer.score %}
+
+                            <h1>Your score: {{ customer.score }} / 100</h1>
+
+                        {%  else %}
+
+                            <p>Get your carbon footprint wellness rating now!</p>
+
+                        {% endif %}
+
+                    <a href="/quiz">
+                        <button type="submit">Get your score</button>
+                    </a>
+
+                </div>
+
+                <div class="consultation-panel">
+
+                    <h2>Upcoming consultation</h2>
+
+                    {% if booking %}
+                        {% if confirm_cancel %}
+                            <div class="cancel-confirmation" style="text-align: center;">
+
+                                <h3>Are you sure you want to cancel your booking?</h3>
+
+                                <div class="booking-buttons">
+                                    <form method="POST" action="{{ url_for('cancel_booking') }}" style="display: inline;">
+                                        <button type="submit">Yes, Cancel</button>
+                                    </form>
+
+                                    <a href="{{ url_for('profile_page') }}" style="display: inline-block; text-decoration: none;">
+                                        <button type="button">Go Back</button>
+                                    </a>
+                                </div>
+                            </div>
+
+                        {% else %}
+                        <div class="booking-info-container">
+                            <div class="time-container">
+                                <p><strong>Booking ID:</strong> {{ booking.booking_id }}</p>
+                                <p><strong>Date:</strong> {{ booking.date }}</p>
+                                <p><strong>Time:</strong> {{ booking.time }}</p>
+                            </div>
+
+                            <div class="location-container">
+                                <p><strong>City:</strong> {{ booking.city }}</p>
+                                <p><strong>Address:</strong> {{ booking.address }}</p>
+                                <p><strong>Postcode:</strong> {{ booking.postcode }}</p>
+                            </div>
+                        </div>
+
+                            <div class="booking-buttons">
+                                <a href="/booking">
+                                    <button type="submit">Change</button>
+                                </a>
+                                <a href="{{ url_for('profile_page', confirm_cancel=True) }}">
+                                    <button type="submit">Cancel</button>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% else %}
+                        <p>You don’t have a booking yet.</p>
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+

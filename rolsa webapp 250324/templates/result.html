@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/quiz.css">
+</head>
+<body>
+
+    {% include 'toolbar.html' %}
+
+    <div class="body-2">
+        <div class="quiz-container">
+        <div class="panel">
+            <h1>Your Carbon Footprint Score</h1>
+            <div class="score">{{ score }} / 100</div>
+            <div class="message">
+                {% if score >= 80 %}
+                    🌱 Excellent! Your lifestyle is very eco-friendly.
+                {% elif score >= 50 %}
+                    ♻️ You're doing well! Keep making sustainable choices.
+                {% else %}
+                    🔄 Every bit helps. Try adopting more green habits!
+                {% endif %}
+            </div>
+            <a href="/">Take the Quiz Again</a>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

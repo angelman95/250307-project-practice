@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/services.css">
+</head>
+<body>
+
+{% include 'toolbar.html' %}
+
+<div class="body-2">
+    <div class="products-container">
+        <h1>Product List</h1>
+        <div class="product-list">
+            {% for product in products %}
+                <a href="{{ url_for('product_profile', product_id=product['productID']) }}">
+
+                    <div class="product-card">
+
+                        {% if product['Category'] == 'Solar Panels' %}
+                            <img src="/static/images/panel-image-solarpanel.jpg" alt="Solar Panel" class="product-image">
+                        {% elif product['Category'] == 'EV Charging Stations' %}
+                            <img src="/static/images/panel-image-evchargingstation.jpg" alt="EV Charging Station" class="product-image">
+                        {% elif product['Category'] == 'Smart Home Devices' %}
+                            <img src="/static/images/panel-image-smarthomecontroller.jpg" alt="Smart Home Device" class="product-image">
+                        {% else %}
+                            <img src="https://example.com/default-image.jpg" alt="Product Image" class="product-image">
+                        {% endif %}
+
+                        <h3>{{ product['Name'] }}</h3>
+                        <p class="price">£{{ product['Price'] }}</p>
+
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

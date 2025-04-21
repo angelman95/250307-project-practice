@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/booking.css">
+    <link rel="stylesheet" href="../static/css/profile.css">
+</head>
+<body>
+
+    {% include 'toolbar.html' %}
+
+    <div class="body-2">
+
+        <div class="date-container">
+
+            <h1>Booking successful!</h1>
+
+            <div class="booking-info-container">
+                <div class="time-container">
+                    <p><strong>Booking ID:</strong> {{ booking.booking_id }}</p>
+                    <p><strong>Date:</strong> {{ booking.date }}</p>
+                    <p><strong>Time:</strong> {{ booking.time }}</p>
+                </div>
+
+                <div class="location-container">
+                    <p><strong>City:</strong> {{ booking.city }}</p>
+                    <p><strong>Address:</strong> {{ booking.address }}</p>
+                    <p><strong>Postcode:</strong> {{ booking.postcode }}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

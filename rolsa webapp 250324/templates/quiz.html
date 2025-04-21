@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/quiz.css">
+</head>
+<body>
+
+    {% include 'toolbar.html' %}
+
+    <div class="body-2">
+        <div class="quiz-container">
+        <div class="panel">
+            <h1>Carbon Footprint Quiz</h1>
+            <form method="post">
+                {% for idx, (question, score) in questions %}
+                <div>
+                    <label>{{ loop.index }}. {{ question }}</label><br>
+                    <input type="radio" name="q{{ idx }}" value="yes" required> Yes
+                    <input type="radio" name="q{{ idx }}" value="no"> No
+                </div>
+                {% endfor %}
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
