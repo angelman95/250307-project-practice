@@ -1,0 +1,49 @@
+https://www.netguru.com/blog/what-is-greentech
+
+colour palette
+
+accents: green #69dc9f
+accents: forest green #228B22
+accents: darker green #006837
+
+text: #e0e0e2
+softer text: #737ba1
+
+background: #0b0c0d
+
+
+
+booking form:
+
+select a time
+
+confirm and change address
+
+required, subject
+optional, select one or multiple products
+optional, add notes
+# print date and location to the side of this form
+
+
+test log ideas:
+
+login check not working, so made a new function using decorator
+make so cant book specific dates
+problem with booking that allows user to place multiple bookings for same time
+information doesn't save in forms when validation check happens
+input field checks not returning error messages
+resizing breaks the page
+how I fixed the toolbar from being weird
+calendar availability issues
+security concerns
+
+
+test log
+media log
+appendix
+
+
+
+
+
+Write the Flask route functions for a carbon footprint quiz web application. The quiz should have 10 yes/no questions, each associated with a score. The questions are provided in a list of tuples called QUESTIONS, where each tuple contains the question text and its corresponding score.
