@@ -1,29 +1,5 @@
 https://www.netguru.com/blog/what-is-greentech
 
-colour palette
-
-accents: green #69dc9f
-accents: forest green #228B22
-accents: darker green #006837
-
-text: #e0e0e2
-softer text: #737ba1
-
-background: #0b0c0d
-
-
-
-booking form:
-
-select a time
-
-confirm and change address
-
-required, subject
-optional, select one or multiple products
-optional, add notes
-# print date and location to the side of this form
-
 
 test log ideas:
 
@@ -40,7 +16,7 @@ security concerns
 
 test log
 media log
-appendix
+screenshots
 
 
 
